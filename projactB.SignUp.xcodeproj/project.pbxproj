@@ -15,6 +15,7 @@
 		D84ED8F62833945E001E1F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84ED8F42833945E001E1F75 /* LaunchScreen.storyboard */; };
 		D84ED8FE28339703001E1F75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84ED8FD28339703001E1F75 /* SecondViewController.swift */; };
 		D84ED9002833B244001E1F75 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84ED8FF2833B244001E1F75 /* ThirdViewController.swift */; };
+		D84ED9022833C15E001E1F75 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84ED9012833C15E001E1F75 /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D84ED8F72833945E001E1F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D84ED8FD28339703001E1F75 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D84ED8FF2833B244001E1F75 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		D84ED9012833C15E001E1F75 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D84ED8E92833945D001E1F75 /* AppDelegate.swift */,
 				D84ED8EB2833945D001E1F75 /* SceneDelegate.swift */,
 				D84ED8ED2833945D001E1F75 /* ViewController.swift */,
+				D84ED9012833C15E001E1F75 /* UserInformation.swift */,
 				D84ED8EF2833945D001E1F75 /* Main.storyboard */,
 				D84ED8FD28339703001E1F75 /* SecondViewController.swift */,
 				D84ED8FF2833B244001E1F75 /* ThirdViewController.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84ED8FE28339703001E1F75 /* SecondViewController.swift in Sources */,
+				D84ED9022833C15E001E1F75 /* UserInformation.swift in Sources */,
 				D84ED8EE2833945D001E1F75 /* ViewController.swift in Sources */,
 				D84ED9002833B244001E1F75 /* ThirdViewController.swift in Sources */,
 				D84ED8EA2833945D001E1F75 /* AppDelegate.swift in Sources */,

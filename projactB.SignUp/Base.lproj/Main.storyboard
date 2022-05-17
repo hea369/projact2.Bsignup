@@ -130,17 +130,26 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMA-1r-1hs">
                                 <rect key="frame" x="170" y="54" width="234" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="21T-rN-GII" id="wn1-PM-X4Z"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXL-k1-dDS">
-                                <rect key="frame" x="170" y="103" width="234" height="34"/>
+                                <rect key="frame" x="170" y="98" width="234" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="21T-rN-GII" id="zXf-PT-BIq"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-gw-ccc">
-                                <rect key="frame" x="170" y="147" width="234" height="34"/>
+                                <rect key="frame" x="170" y="142" width="234" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="21T-rN-GII" id="ace-3C-CB4"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-72-zAp">
                                 <rect key="frame" x="20" y="234" width="374" height="300"/>
@@ -185,7 +194,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="FMA-1r-1hs" firstAttribute="top" secondItem="Y9u-Jl-WJQ" secondAttribute="top" constant="10" id="5Ek-Ds-jbm"/>
-                            <constraint firstItem="ZXL-k1-dDS" firstAttribute="top" secondItem="FMA-1r-1hs" secondAttribute="bottom" constant="15" id="6xg-Ea-4Mb"/>
+                            <constraint firstItem="ZXL-k1-dDS" firstAttribute="top" secondItem="FMA-1r-1hs" secondAttribute="bottom" constant="10" id="6xg-Ea-4Mb"/>
                             <constraint firstItem="LRy-qE-1xP" firstAttribute="top" secondItem="lYv-72-zAp" secondAttribute="bottom" constant="20" id="9Zd-qD-czS"/>
                             <constraint firstItem="6ek-uc-eb0" firstAttribute="bottom" secondItem="3pO-rP-AuC" secondAttribute="bottom" id="B0E-4O-bga"/>
                             <constraint firstItem="lYv-72-zAp" firstAttribute="top" secondItem="3pO-rP-AuC" secondAttribute="bottom" constant="50" id="B3h-kw-ezI"/>
@@ -215,6 +224,10 @@
                     <navigationItem key="navigationItem" id="FZl-vG-axW"/>
                     <connections>
                         <outlet property="imageView" destination="3pO-rP-AuC" id="Vd2-UO-eQf"/>
+                        <outlet property="nameField" destination="FMA-1r-1hs" id="ZiA-qM-S4W"/>
+                        <outlet property="nextButton" destination="Zt7-Uc-h8c" id="seF-I4-gCh"/>
+                        <outlet property="password2Field" destination="FkX-gw-ccc" id="Vu6-oz-lHt"/>
+                        <outlet property="passwordField" destination="ZXL-k1-dDS" id="a1k-Pj-99I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9t-nj-8Da" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
