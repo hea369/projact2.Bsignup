@@ -7,14 +7,37 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, UINavigationControllerDelegate {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    @IBOutlet var numberText: UITextField!
+    @IBOutlet var SignUpButton: UIButton!
+    @IBOutlet weak var datePiker: UIDatePicker!
+    @IBOutlet weak var dateLabel: UILabel!
+    let dateFormatter: DateFormatter = {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
+    
+    @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
+       
+        let date: Date = self.datePiker.date
+        let dateString: String =  self.dateFormatter.string(from: date)
+        self.dateLabel.text = dateString
     }
+    @IBAction func tapView3(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func dismissModel() {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+extension ThirdViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        SignUpButton.isEnabled = false
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        SignUpButton.isEnabled = true
     }
 }

@@ -12,5 +12,4 @@ class UserInformation {
     
     var name: String?
     var passward: String?
-    var passward2: String?
 }

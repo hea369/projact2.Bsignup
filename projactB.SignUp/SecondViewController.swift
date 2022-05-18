@@ -43,7 +43,6 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func dismissModel() {
         self.dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
@@ -58,12 +57,11 @@ extension SecondViewController: UITextFieldDelegate {
         nextButton.isEnabled = false
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nextButton.isEnabled == true {
-            UserInformation.shared.passward = UserInformation.shared.passward2
+        if passwordField.text == password2Field.text {
+            nextButton.isEnabled = true
         }
     }
 }
-
 extension SecondViewController: UIImagePickerControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
