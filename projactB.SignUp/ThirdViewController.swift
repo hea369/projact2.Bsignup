@@ -19,12 +19,9 @@ class ThirdViewController: UIViewController, UINavigationControllerDelegate {
         return formatter
     }()
     @IBAction func signUpButton2(_ sender: Any) {
-        UserInformation.shared.name
-        UserInformation.shared.passward
         self.presentingViewController?
             .presentingViewController?
             .dismiss(animated: true, completion: nil)
-        
     }
     @IBAction func dismissModel3() {
         UserInformation.shared.name = ""

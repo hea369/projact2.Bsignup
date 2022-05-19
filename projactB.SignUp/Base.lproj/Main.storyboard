@@ -24,6 +24,7 @@
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="touchUpsetButton:" destination="k0F-BX-VNb" eventType="touchUpInside" id="vL9-Xf-jPX"/>
                                     <segue destination="21T-rN-GII" kind="presentation" id="PeL-QQ-TtD"/>
                                 </connections>
                             </button>
@@ -102,8 +103,13 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qPe-5s-rYD"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Mng-JG-5F2" id="vUH-qL-GRx"/>
+                        <outlet property="passwordTextField" destination="jdk-YZ-XWR" id="xrd-dv-mqI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="k0F-BX-VNb" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="NfJ-wY-LOP">
                     <connections>
                         <action selector="tapView2:" destination="BYZ-38-t0r" id="A6Y-FJ-taG"/>
@@ -194,6 +200,7 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="touchUpsetButton:" destination="21T-rN-GII" eventType="touchUpInside" id="bQg-50-rRa"/>
                                     <segue destination="Hyc-CK-p5O" kind="show" id="39n-4F-uZy"/>
                                 </connections>
                             </button>
