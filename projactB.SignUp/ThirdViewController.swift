@@ -19,16 +19,12 @@ class ThirdViewController: UIViewController, UINavigationControllerDelegate {
         return formatter
     }()
     @IBAction func signUpButton2(_ sender: Any) {
-        self.presentingViewController?
-            .presentingViewController?
-            .dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
     }
     @IBAction func dismissModel3() {
         UserInformation.shared.name = ""
         UserInformation.shared.passward = ""
-        self.presentingViewController?
-            .presentingViewController?
-            .dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
     }
     @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
         
@@ -41,7 +37,7 @@ class ThirdViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func dismissModel() {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 extension ThirdViewController: UITextFieldDelegate {

@@ -26,7 +26,6 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = false
     }
     
     @IBAction func touchUpsetButton(_ sender: UIButton) {
@@ -36,11 +35,6 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func touchUpSelectImageButton(_ sender: UIButton) {
         self.present(self.imagePicker, animated: true, completion:  nil)
     }
-    
-    
-    // @IBAction func popToPrev() {
-    //    self.navigationController?.popViewController(animated: true)
-    
     @IBAction func dismissModel() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -51,11 +45,13 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate {
 
 extension SecondViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        nextButton.isEnabled = false
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if passwordField.text == password2Field.text {
+        if passwordField.text == password2Field.text && nameField.text != "" && passwordField.text != "" {
             nextButton.isEnabled = true
+        }
+        else {
+            nextButton.isEnabled = false
         }
     }
 }
