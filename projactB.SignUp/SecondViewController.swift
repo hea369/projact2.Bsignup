@@ -9,6 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController, UINavigationControllerDelegate {
     
+  
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var password2Field: UITextField!
@@ -31,11 +32,13 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
     }
     
     @IBAction func touchUpSelectImageButton(_ sender: UIButton) {
         self.present(self.imagePicker, animated: true, completion:  nil)
     }
+    
     
     // @IBAction func popToPrev() {
     //    self.navigationController?.popViewController(animated: true)
@@ -54,7 +57,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate {
 
 extension SecondViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        nextButton.isEnabled = false
+        nameField.isEnabled = false
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if passwordField.text == password2Field.text {

@@ -18,9 +18,23 @@ class ThirdViewController: UIViewController, UINavigationControllerDelegate {
         formatter.dateStyle = .medium
         return formatter
     }()
-    
+    @IBAction func signUpButton2(_ sender: Any) {
+        UserInformation.shared.name
+        UserInformation.shared.passward
+        self.presentingViewController?
+            .presentingViewController?
+            .dismiss(animated: true, completion: nil)
+        
+    }
+    @IBAction func dismissModel3() {
+        UserInformation.shared.name = ""
+        UserInformation.shared.passward = ""
+        self.presentingViewController?
+            .presentingViewController?
+            .dismiss(animated: true, completion: nil)
+    }
     @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
-       
+        
         let date: Date = self.datePiker.date
         let dateString: String =  self.dateFormatter.string(from: date)
         self.dateLabel.text = dateString
